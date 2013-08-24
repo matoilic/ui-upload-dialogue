@@ -1,0 +1,91 @@
+@import "compass";
+
+* {
+    @include box-sizing(border-box);
+}
+
+body {
+    background: #4c4f56;
+    color: #444;
+    font-family: Helvetica;
+    font-size: 12px;
+}
+
+.upload-dialogue {
+    @include background-image(linear-gradient(#e6e9f1, #f3f5f8));
+    @include border-radius(10px);
+    @include box-shadow(rgba(0, 0, 0, 0.5) 0 25px 50px 0);
+
+    margin: 10em auto;
+    padding: 26px 13px 15px 13px;
+    width: 500px;
+
+    & > header {
+        font-size: 1.5em;
+        margin: 0 0 1em 20px;
+    }
+
+    ul {
+        border-bottom: 1px solid #d9dce0;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    & > footer {
+        border-top: 1px solid #fff;
+        padding: 0.5em 2px 0 0;
+        text-align: right;
+    }
+
+    button {
+        @include background-image(linear-gradient(#fff, #dde1e8));
+        @include border-radius(5px);
+
+        border: 1px solid #9ea0a5;
+        cursor: pointer;
+        font-weight: bold;
+        padding: 4px 7px;
+    }
+
+    button:active {
+        @include background-image(linear-gradient(#dde1e8, #fff));
+    }
+}
+
+.upload-dialogue-progressbar {
+    @include background-image(linear-gradient(#c2c3c8, #d3d4d9));
+    @include border-radius(7px);
+
+    border: 1px solid #a5a5aa;
+    color: #444;
+    height: 13px;
+    width: 250px;
+}
+
+.upload-dialogue-progressbar-inner {
+    @include background-image(linear-gradient(#ebeef3, #d7dadf));
+    @include border-radius(7px);
+
+    height: 100%;
+}
+
+.upload-dialogue-document {
+    @include border-radius(5px);
+
+    background: #e7e8ee url("../Images/document-icon.png") no-repeat 30px center;
+    background-size: 70px auto;
+    border: 1px solid #c6c8cb;
+    margin: 0 0 0.5em 10px;
+    padding: 35px 0 40px 125px;
+    width: 457px;
+
+    & > header {
+        font-weight: bold;
+        margin-bottom: 0.5em;
+    }
+
+    & > footer {
+        margin-top: 0.5em;
+    }
+}
